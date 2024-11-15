@@ -1,0 +1,120 @@
+p {
+    font-family: inherit; /* Inherits font from Bootstrap */
+    font-size: 1rem; /* Default Bootstrap font size for paragraph */
+    color: #6c757d; /* Default Bootstrap text color */
+    line-height: 1.5; /* Default line height from Bootstrap */
+}
+
+/* Card Styling */
+.card {
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border-color: #007bff; /* Change border color on hover */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.card-link {
+    color: #17a2b8;
+    font-weight: 500;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Profile Section Base Styles */
+.profile-section {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: grayscale(100%);
+}
+
+/* Hover Effect for Profile Image */
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    filter: grayscale(0%);
+}
+
+.profile-btn i {
+    margin-right: 8px; /* Adds spacing between the icon and text */
+    font-size: 1.2rem; /* Adjusts the icon size */
+}
+
+/* GitHub button styling */
+.github-btn {
+    background-color: #333; /* GitHub dark color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+}
+
+.github-btn:hover {
+    background-color: #444; /* Darken on hover */
+    color: #fff;
+}
+
+/* LinkedIn button styling */
+.linkedin-btn {
+    background-color: #0077B5; /* LinkedIn brand color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+}
+
+.linkedin-btn:hover {
+    background-color: #005A8B; /* Darken on hover */
+    color: #fff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        text-align: center;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    .text-muted {
+        font-size: 1rem;
+    }
+}
+
+/* Image Style for Cards */
+.card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+    border: 2px solid #e0e0e0; /* Matching border with the card */
+}
