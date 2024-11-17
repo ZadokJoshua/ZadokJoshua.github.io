@@ -1,10 +1,13 @@
+b, strong {
+    font-weight: bold !important;
+}
+
 p {
     font-family: inherit; /* Inherits font from Bootstrap */
     font-size: 1rem; /* Default Bootstrap font size for paragraph */
     color: #6c757d; /* Default Bootstrap text color */
     line-height: 1.5; /* Default line height from Bootstrap */
 }
-
 
 /* Card Styling */
 .card {
@@ -35,6 +38,17 @@ p {
 
 .card-link:hover {
     text-decoration: underline;
+}
+
+.card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+    border: 2px solid #e0e0e0; /* Matching border with the card */
+}
+
+.card-title, .card-text, .card-link {
+    font-family: inherit; /* Ensure it inherits the global font */
 }
 
 /* Profile Section Base Styles */
@@ -86,14 +100,14 @@ p {
 }
 
 .linkedin-btn:hover {
-    background-color: #005A8B; /* Darken on hover */
+    background-color: #005A8B;
     color: #fff;
 }
 
 .custom-nav a {
     font-weight: bold;
     text-transform: uppercase;
-    color: #007bff; /* Bootstrap primary color */
+    color: #007bff;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -103,7 +117,6 @@ p {
 }
 
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .profile-section {
         text-align: center;
@@ -123,13 +136,9 @@ p {
     .text-muted {
         font-size: 1rem;
     }
-}
 
-/* Image Style for Cards */
-.card-img-top {
-    height: 200px; /* Adjust as needed */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 10px 10px 0 0; /* Rounded corners on the top */
-    border: 2px solid #e0e0e0; /* Matching border with the card */
+    b, strong {
+        font-weight: bold !important;
+    }
 }
 
