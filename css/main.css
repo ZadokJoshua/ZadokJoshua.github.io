@@ -1,161 +1,243 @@
-p {
-    font-family: inherit;
-    font-size: 1rem;
-    color: #636e72;
+:root {
+    --ms-primary: #0078d4;
+    --ms-secondary: #106ebe;
+    --ms-background: #faf9f8;
+    --ms-card-bg: #ffffff;
+    --ms-text: #323130;
+    --ms-text-secondary: #605e5c;
+    --ms-border: #edebe9;
+    --ms-hover: #f3f2f1;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--ms-background);
+    color: var(--ms-text);
     line-height: 1.5;
 }
 
+p {
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ms-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* Card Styling */
 .card {
-    background-color: #f5f5f5;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: var(--ms-card-bg);
+    border: 1px solid var(--ms-border);
+    border-radius: 2px;
+    box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.13);
+    transition: all 0.15s ease-in-out;
+    margin-bottom: 16px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-    border-color: #00b894;
-    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 3.2px 7.2px rgba(0, 0, 0, 0.18);
+    border-color: var(--ms-border);
 }
 
 .card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #2d3436;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ms-text);
+    margin-bottom: 8px;
 }
 
 .card-text {
-    color: #636e72;
+    color: var(--ms-text-secondary);
+    font-size: 14px;
 }
 
 .card-link {
-    color: #00b894;
+    color: var(--ms-primary);
     font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .card-link:hover {
     text-decoration: underline;
-    color: #00d1a7;
+    color: var(--ms-secondary);
 }
 
 .card-img-top {
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    border: 2px solid #e0e0e0;
+    border-bottom: 1px solid var(--ms-border);
 }
 
-.card-title, .card-text, .card-link {
-    font-family: inherit;
-}
-
+/* Profile Section */
 .profile-section {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+    background-color: var(--ms-card-bg);
+    border-bottom: 1px solid var(--ms-border);
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #00b894;
-    box-shadow: 0 0 10px rgba(0, 184, 148, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--ms-primary);
+    transition: all 0.3s ease;
     filter: grayscale(100%);
 }
 
 .profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 184, 148, 0.5);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 20px rgba(0, 120, 212, 0.3);
     filter: grayscale(0%);
+    border: 3px solid var(--ms-primary);
+}
+
+/* Buttons */
+.profile-btn {
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.15s ease-in-out;
+    margin: 4px;
 }
 
 .profile-btn i {
     margin-right: 8px;
-    font-size: 1.2rem;
+    font-size: 14px;
 }
 
 .github-btn {
-    background-color: #2d3436;
-    color: #fff;
-    border: none;
+    background-color: var(--ms-text);
+    color: white;
+    border: 1px solid transparent;
 }
 
 .github-btn:hover {
-    background-color: #636e72;
-    color: #fff;
+    background-color: #201f1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .linkedin-btn {
-    background-color: #0077B5;
-    color: #fff;
-    border: none;
+    background-color: var(--ms-primary);
+    color: white;
+    border: 1px solid transparent;
 }
 
 .linkedin-btn:hover {
-    background-color: #005A8B;
-    color: #fff;
+    background-color: var(--ms-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+.custom-nav {
+    background-color: white;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    padding: 0 20px;
 }
 
 .custom-nav a {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #00b894;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ms-text);
+    padding: 12px 16px;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .custom-nav a:hover {
-    color: #00d1a7;
-    text-shadow: 0px 4px 10px rgba(0, 184, 148, 0.5);
+    background-color: var(--ms-hover);
+    color: var(--ms-primary);
 }
 
-.container-fluid {
-    background-image: url('../images/bryce-evans-choc7LYd98I-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Section Headings */
+.section-heading {
+    color: var(--ms-text);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ms-border);
 }
 
-@media (max-width: 768px) {
-    .profile-section {
-        text-align: center;
-        padding: 1.5rem 0.5rem;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.75rem;
-    }
-
-    .text-muted {
-        font-size: 1rem;
-    }
-
-    b, strong {
-        font-weight: bold !important;
-    }
-}
-
+/* Footer */
 .copyright {
-    font-size: 0.8rem;
-    text-align: left;
+    font-size: 12px;
+    color: var(--ms-text-secondary);
+    padding: 16px 0;
+    border-top: 1px solid var(--ms-border);
 }
 
 .copyright a {
-    color: #2d3436;
+    color: var(--ms-primary);
     text-decoration: none;
 }
 
-.section-heading {
-    color: #00b894;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+.container-fluid {
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(16, 110, 190, 0.08) 100%),
+                url('../images/bryce-evans-choc7LYd98I-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-section {
+        text-align: center;
+        padding: 16px;
+    }
+
+    .profile-image {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .profile-btn {
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .custom-nav {
+        padding: 0 8px;
+    }
+
+    .custom-nav a {
+        padding: 8px;
+    }
+}
+
+/* Command Bar (Optional) */
+.command-bar {
+    background-color: var(--ms-card-bg);
+    border-bottom: 1px solid var(--ms-border);
+    padding: 8px 16px;
+    margin-bottom: 16px;
+}
+
+.command-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 6px 12px;
+    color: var(--ms-text);
+    font-size: 14px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+.command-bar button:hover {
+    background-color: var(--ms-hover);
 }
 
