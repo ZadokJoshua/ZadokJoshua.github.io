@@ -165,7 +165,7 @@ p {
 /* Footer */
 .copyright {
     font-size: 12px;
-    color: var(--ms-text-secondary);
+    color: var (--ms-text-secondary);
     padding: 16px 0;
     border-top: 1px solid var(--ms-border);
 }
@@ -183,7 +183,6 @@ p {
     border-radius: 10px;
     overflow: hidden;
 }
-
 
 .container-fluid {
     background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(16, 110, 190, 0.08) 100%),
@@ -246,4 +245,3 @@ p {
 .command-bar button:hover {
     background-color: var(--ms-hover);
 }
-
