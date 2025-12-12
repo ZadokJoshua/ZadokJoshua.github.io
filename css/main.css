@@ -148,7 +148,7 @@ p {
 }
 
 .social-links i {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .profile-image {
@@ -165,6 +165,43 @@ p {
     transform: scale(1.08) rotate(2deg);
     box-shadow: 0 0 24px rgba(0, 120, 212, 0.4);
     border: 3px solid var(--ms-secondary);
+}
+
+/* Buttons */
+.profile-btn {
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.15s ease-in-out;
+    margin: 4px;
+}
+
+.profile-btn i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.github-btn {
+    background-color: var(--ms-text);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.github-btn:hover {
+    background-color: #201f1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.linkedin-btn {
+    background-color: var(--ms-primary);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.linkedin-btn:hover {
+    background-color: var(--ms-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation */
@@ -223,22 +260,30 @@ p {
 }
 
 .container-fluid {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #0078d4 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background: #1a1a1a;
     min-height: 100vh;
 }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Command Bar */
+.command-bar {
+    background-color: var(--ms-card-bg);
+    border-bottom: 1px solid var(--ms-border);
+    padding: 8px 16px;
+    margin-bottom: 16px;
+}
+
+.command-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 6px 12px;
+    color: var(--ms-text);
+    font-size: 14px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+.command-bar button:hover {
+    background-color: var(--ms-hover);
 }
 
 /* Media Queries */
@@ -261,6 +306,11 @@ p {
         justify-content: center;
     }
 
+    .profile-btn {
+        width: 100%;
+        margin: 4px 0;
+    }
+
     .custom-nav {
         padding: 0 8px;
     }
@@ -277,281 +327,4 @@ p {
     .section-heading {
         font-size: 18px;
     }
-}
-
-body {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--ms-background);
-    color: var(--ms-text);
-    line-height: 1.5;
-}
-
-p {
-    font-family: inherit;
-    font-size: 14px;
-    color: var(--ms-text-secondary);
-    line-height: 1.5;
-    margin-bottom: 16px;
-}
-
-/* Card Styling */
-.card {
-    background-color: var(--ms-card-bg);
-    border: 1px solid var(--ms-border);
-    border-radius: 2px;
-    box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.13);
-    transition: all 0.15s ease-in-out;
-    margin-bottom: 16px;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3.2px 7.2px rgba(0, 0, 0, 0.18);
-    border-color: var(--ms-border);
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--ms-text);
-    margin-bottom: 8px;
-}
-
-.card-text {
-    color: var(--ms-text-secondary);
-    font-size: 14px;
-}
-
-.card-link {
-    color: var(--ms-primary);
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.card-link:hover {
-    text-decoration: underline;
-    color: var(--ms-secondary);
-}
-
-.card-img-top {
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--ms-border);
-}
-
-/* Profile Section */
-.profile-section {
-    padding: 24px 16px;
-    margin-bottom: 24px;
-    background-color: var(--ms-card-bg);
-    border-bottom: 1px solid var(--ms-border);
-}
-
-.social-links {
-    display: flex;
-    gap: 16px;
-    justify-content: flex-start;
-    margin-top: 8px;
-}
-
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--ms-text);
-    background-color: transparent;
-    border: 1px solid var(--ms-border);
-    border-radius: 4px;
-    padding: 8px 10px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.social-links a:hover {
-    background-color: var(--ms-hover);
-    border-color: var(--ms-primary);
-    color: var(--ms-primary);
-    text-decoration: none;
-}
-
-.social-links i {
-    font-size: 18px;
-}
-
-.social-links i {
-    font-size: 24px;
-}
-
-.profile-image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--ms-primary);
-    transition: all 0.3s ease;
-    filter: grayscale(100%);
-}
-
-.profile-image:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 0 20px rgba(0, 120, 212, 0.3);
-    filter: grayscale(0%);
-    border: 3px solid var(--ms-primary);
-}
-
-/* Buttons */
-.profile-btn {
-    padding: 8px 16px;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.15s ease-in-out;
-    margin: 4px;
-}
-
-.profile-btn i {
-    margin-right: 8px;
-    font-size: 14px;
-}
-
-.github-btn {
-    background-color: var(--ms-text);
-    color: white;
-    border: 1px solid transparent;
-}
-
-.github-btn:hover {
-    background-color: #201f1e;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.linkedin-btn {
-    background-color: var(--ms-primary);
-    color: white;
-    border: 1px solid transparent;
-}
-
-.linkedin-btn:hover {
-    background-color: var(--ms-secondary);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Navigation */
-.custom-nav {
-    background-color: white;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
-    padding: 0 20px;
-}
-
-.custom-nav a {
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--ms-text);
-    padding: 12px 16px;
-    transition: background-color 0.15s ease-in-out;
-}
-
-.custom-nav a:hover {
-    background-color: var(--ms-hover);
-    color: var(--ms-primary);
-}
-
-/* Section Headings */
-.section-heading {
-    color: var(--ms-text);
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--ms-border);
-}
-
-/* Footer */
-.copyright {
-    font-size: 12px;
-    color: var (--ms-text-secondary);
-    padding: 16px 0;
-    border-top: 1px solid var(--ms-border);
-}
-
-.copyright a {
-    color: var(--ms-primary);
-    text-decoration: none;
-}
-
-.copyright a:hover {
-    text-decoration: underline;
-}
-
-.ratio-16x9 {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.container-fluid {
-    background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(16, 110, 190, 0.08) 100%),
-                url('../images/luke-chesser-pJadQetzTkI-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .profile-section {
-        text-align: center;
-        padding: 16px;
-    }
-
-    .profile-image {
-        width: 96px;
-        height: 96px;
-        margin-bottom: 16px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .profile-btn {
-        width: 100%;
-        margin: 4px 0;
-    }
-
-    .custom-nav {
-        padding: 0 8px;
-    }
-
-    .custom-nav a {
-        padding: 8px;
-    }
-}
-
-/* Command Bar (Optional) */
-.command-bar {
-    background-color: var(--ms-card-bg);
-    border-bottom: 1px solid var(--ms-border);
-    padding: 8px 16px;
-    margin-bottom: 16px;
-}
-
-.command-bar button {
-    background-color: transparent;
-    border: none;
-    padding: 6px 12px;
-    color: var(--ms-text);
-    font-size: 14px;
-    margin-right: 8px;
-    border-radius: 2px;
-}
-
-.command-bar button:hover {
-    background-color: var(--ms-hover);
 }

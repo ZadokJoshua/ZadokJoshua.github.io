@@ -1,228 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zadok Joshua - Software Engineer">
+    <meta name="description" content="Software Engineer specializing in .NET, Python, and full-stack development.">
+    <meta name="keywords" content="Zadok Joshua, Software Engineer, .NET, Python, C#, Full Stack Developer">
+    <meta name="author" content="Zadok Joshua">
+    
+    <title>Zadok Joshua - Software Engineer</title>
+    
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='black'/><text x='4' y='24' font-size='18' font-family='Arial' fill='white'>ZJ</text></svg>">
+    
+    <style>
+        :root {
+            --ms-primary: #0078d4;
+            --ms-secondary: #106ebe;
+            --ms-background: #faf9f8;
+            --ms-card-bg: #ffffff;
+            --ms-text: #323130;
+            --ms-text-secondary: #605e5c;
+            --ms-border: #edebe9;
+            --ms-hover: #f3f2f1;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        <title>Zadok Joshua - Software Engineer</title>
-        <meta name="title" content="Zadok Joshua - Software Engineer">
-        <meta name="description" content="Software Engineer specializing in .NET, Python, and full-stack development.">
-        <meta name="keywords" content="Zadok Joshua, Software Engineer, .NET, Python, C#, Full Stack Developer">
-        <meta name="author" content="Zadok Joshua">
-        <!-- External CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet" >
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <link rel="icon" 
-            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='black'/><text x='4' y='24' font-size='18' font-family='Arial' fill='white'>ZJ</text></svg>">
-    </head>
-    <body>
-        <!-- Main Container -->
-        <div class="container-fluid bg-secondary py-5">
-            <div class="container-sm bg-white p-5 rounded shadow-lg"
-                 style="max-width: 900px;">
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--ms-background);
+            color: var(--ms-text);
+            line-height: 1.6;
+        }
 
-                <!-- Profile Section -->
-            <section class="profile-section d-flex flex-column flex-sm-row align-items-center mb-4">
-                <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle profile-image mb-3 mb-sm-0 me-sm-4">
+        p {
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--ms-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: var(--ms-card-bg);
+            border: 1px solid var(--ms-border);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            margin-bottom: 16px;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            border-color: var(--ms-primary);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ms-text);
+            margin-bottom: 8px;
+        }
+
+        .card-text {
+            color: var(--ms-text-secondary);
+            font-size: 14px;
+        }
+
+        .card-link {
+            color: var(--ms-primary);
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .card-link:hover {
+            color: var(--ms-secondary);
+            text-decoration: underline;
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--ms-border);
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(16, 110, 190, 0.03) 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--ms-border);
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .about-card:hover {
+            border-color: var(--ms-primary);
+            box-shadow: 0 4px 12px rgba(0, 120, 212, 0.1);
+        }
+
+        .about-card h6 {
+            color: var(--ms-primary);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .about-card p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            padding: 24px 16px;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.02) 0%, rgba(16, 110, 190, 0.02) 100%);
+            border-radius: 8px;
+            border-bottom: 2px solid var(--ms-border);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-start;
+            margin-top: 8px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--ms-text);
+            background-color: transparent;
+            border: 1px solid var(--ms-border);
+            border-radius: 6px;
+            padding: 8px 10px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .social-links a:hover {
+            background-color: var(--ms-primary);
+            border-color: var(--ms-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 120, 212, 0.2);
+        }
+
+        .social-links i {
+            font-size: 24px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--ms-primary);
+            transition: var(--transition);
+            filter: grayscale(0%);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 0 24px rgba(0, 120, 212, 0.4);
+            border: 3px solid var(--ms-secondary);
+        }
+
+        /* Section Headings */
+        .section-heading {
+            color: var(--ms-text);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--ms-primary);
+        }
+
+        /* Footer */
+        .copyright {
+            font-size: 12px;
+            color: var(--ms-text-secondary);
+            padding: 24px 0;
+            border-top: 1px solid var(--ms-border);
+            text-align: center;
+        }
+
+        .ratio-16x9 {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .container-fluid {
+            background: #1a1a1a;
+            min-height: 100vh;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .profile-section {
+                text-align: center;
+                padding: 16px;
+            }
+
+            .profile-image {
+                width: 96px;
+                height: 96px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                font-size: 18px;
+            }
+        }
+
+        .clickable-card {
+            cursor: pointer;
+        }
+
+        .job-title {
+            font-size: 13px;
+            color: #0078d4;
+            margin-bottom: 16px;
+        }
+
+        .featured-video {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 120, 212, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-5">
+        <div class="container-sm bg-white p-5 rounded shadow-lg" style="max-width: 900px;">
+            
+            <!-- Profile Section -->
+            <header class="profile-section d-flex flex-column flex-sm-row align-items-center mb-4">
+                <img src="images/profile-picture.jpg" alt="Zadok Joshua - Software Engineer" class="profile-image mb-3 mb-sm-0 me-sm-4">
                 <div class="text-center text-sm-start">
-                    <h3 class="h3 mb-2" style="font-size: 2rem;">Zadok Joshua</h3>
-                    <h6 style="font-size: 13px; color: #0078d4;; margin-bottom: 16px;">
-                        <i class="fas fa-briefcase"></i> Software Engineer @ CypherCrescent Ltd
-                    </h6>
-                    <div class="social-links mt-3">
-                        <a href="mailto:zadokjoshua@outlook.com" title="Email">
-                            <i class="fas fa-envelope"></i>
+                    <h1 class="h3 mb-2" style="font-size: 2rem;">Zadok Joshua</h1>
+                    <p class="job-title">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i> Software Engineer @ CypherCrescent Ltd
+                    </p>
+                    <nav class="social-links mt-3" aria-label="Social media links">
+                        <a href="mailto:zadokjoshua@outlook.com" title="Email" aria-label="Send me an email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/ZadokJoshua" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/ZadokJoshua" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Visit my GitHub profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/zadok-joshua" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/zadok-joshua" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Visit my LinkedIn profile">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- About Section -->
+            <section class="mb-4">
+                <p style="text-align: justify;">
+                    Hi, I'm <strong>Zadok Joshua</strong>. A passionate software engineer specializing in full-stack development with <strong>.NET and Python</strong>. I love building innovative solutions that solve real-world problems.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h6><i class="fas fa-code" aria-hidden="true"></i> Technical Skills</h6>
+                        <p>Python • C# • .NET • ASP.NET Core • React • SQL Server • Azure • Supabase</p>
+                    </div>
+                    <div class="about-card">
+                        <h6><i class="fas fa-lightbulb" aria-hidden="true"></i> Focus Areas</h6>
+                        <p>AI/ML • System Design • Cloud Architecture • Full-Stack Development</p>
+                    </div>
+                </div>
+
+                <!-- Achievement Section with Video -->
+                <div class="row mt-4 mb-4 align-items-center">
+                    <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+                        <div>
+                            <p style="text-align: justify; font-size: 14px; margin-bottom: 0;">
+                                <strong>Featured:</strong> I participated in the <a href="https://github.com/microsoft/hack-together-dotnet" target="_blank" rel="noopener noreferrer">Microsoft Hack Together: The Great .NET 8 Hack</a> and won the Artificial Intelligence category! My project, <strong>Betakads</strong>, leverages AI to streamline Anki flashcard creation by extracting text from PDFs and captions from YouTube videos. This accomplishment was recognized on <a href="https://devblogs.microsoft.com/dotnet/great-dotnet-8-hack-winners/" target="_blank" rel="noopener noreferrer">Microsoft's developer blog</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 featured-video">
+                            <iframe 
+                                src="https://www.youtube.com/embed/NJot80uMbp0?si=24eiwX-uRWkOA9t5"
+                                title="Betakads - AI-Powered Anki Flashcard Generator"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </section>
 
-                <!-- About Section -->
-                <section class="text-center mb-4">
-                    <p style="text-align: justify;">
-                        Hi, I'm <b>Zadok Joshua</b>. A passionate software engineer specializing in full-stack development with <b>.NET and Python</b>. I love building innovative solutions that solve real-world problems.
-                    </p>
-
-                    <div class="about-grid">
-                        <div class="about-card">
-                            <h6><i class="fas fa-code"></i> Technical Skills</h6>
-                            <p>Python • C# • .NET • ASP.NET Core • React • SQL Server • Azure • Supabase</p>
-                        </div>
-                        <div class="about-card">
-                            <h6><i class="fas fa-lightbulb"></i> Focus Areas</h6>
-                            <p>AI/ML • System Design • Cloud Architecture • Full-Stack Development</p>
-                        </div>
-                    </div>
-
-                    <!-- Achievement Section with Video -->
-                    <div class="row mt-4 mb-4 align-items-center">
-                        <!-- Achievement Text Column -->
-                        <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
-                            <div>
-                                <p style="text-align: justify; font-size: 14px; margin-bottom: 0;">
-                                    <b>Featured:</b> I participated in the <a href="https://github.com/microsoft/hack-together-dotnet" target="_blank">Microsoft Hack Together: The Great .NET 8 Hack</a> and won the Artificial Intelligence category! My project, <b>Betakads</b>, leverages AI to streamline Anki flashcard creation by extracting text from PDFs and captions from YouTube videos. This accomplishment was recognized on <a href="https://devblogs.microsoft.com/dotnet/great-dotnet-8-hack-winners/" target="_blank">Microsoft's developer blog</a>.
+            <!-- Projects Section -->
+            <section class="mb-4" id="projects">
+                <h2 class="section-heading">
+                    <i class="fas fa-tasks" aria-hidden="true"></i> Projects
+                </h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column">
+                            <img src="images/sautive.jpg" class="card-img-top" alt="Sautive platform screenshot" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Sautive</h3>
+                                <p class="card-text">
+                                    A platform that connects volunteers, interns and nonprofits across Africa.
                                 </p>
+                                <a href="https://www.sautive.com/" target="_blank" rel="noopener noreferrer" class="card-link mt-auto">
+                                    🚧 Under Construction
+                                </a>
                             </div>
-                        </div>
-                        <!-- Video Column -->
-                        <div class="col-md-6">
-                            <div class="ratio ratio-16x9" style="border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 120, 212, 0.2);">
-                                <iframe width="560" height="315"
-                                        src="https://www.youtube.com/embed/NJot80uMbp0?si=24eiwX-uRWkOA9t5"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin"
-                                        allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
+                        </article>
                     </div>
-
-                </section>
-
-                <!-- Projects Section -->
-                <section class="mb-4" id="projects">
-                    <h3 class="section-heading">
-                        <i class="fas fa-tasks"></i> Projects
-                    </h3>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column">
-                                <img src="images/sautive.jpg" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Sautive</h5>
-                                    <p class="card-text">
-                                        A platform that connects volunteers, interns and nonprofits across Africa.
-                                    </p>
-                                    <a href="https://www.sautive.com/" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">🚧 Under Construction</a>
-                                </div>
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://www.joincolab.io/product/parkinn', '_blank')">
+                            <img src="images/parkinn.png" class="card-img-top" alt="ParkInn app interface" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">ParkInn</h3>
+                                <p class="card-text">
+                                    A mobile app for city drivers looking to quickly and easily find a parking spot.
+                                </p>
+                                <a href="https://www.joincolab.io/product/parkinn" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    View Project
+                                </a>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://www.joincolab.io/product/parkinn', '_blank')">
-                                <img src="images/parkinn.png" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">ParkInn</h5>
-                                    <p class="card-text">
-                                        A mobile app for city drivers looking to quickly and easily find a parking spot.
-                                    </p>
-                                    <a href="https://www.joincolab.io/product/parkinn" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://www.joincolab.io/product/dr-car-quotes', '_blank')">
-                                <img src="images/Dr-Car-Quotes.png" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Dr. Car Quotes</h5>
-                                    <p class="card-text">
-                                        A tool that allows car owners to quickly compare prices of local auto shops.
-                                    </p>
-                                    <a href="https://www.joincolab.io/product/dr-car-quotes" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://github.com/ZadokJoshua/MP-MMS', '_blank')">
-                                <img src="images/mpmms.jpg" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">MP-MMS</h5>
-                                    <p class="card-text">Monitor and track the state of machine parts and equipment in your engineering workshop</p>
-                                    <a href="https://github.com/ZadokJoshua/MP-MMS" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://github.com/ZadokJoshua/betakads-avalonia-app', '_blank')">
-                                <img src="images/betakads-fluent2.png" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Betakads</h5>
-                                    <p class="card-text">AI-Powered Anki Flashcard Generator</p>
-                                    <a href="https://github.com/ZadokJoshua/betakads-avalonia-app" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">View Project</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://1drv.ms/f/c/157503b4ec3c0850/ElAIPOy0A3UggBVqBQAAAAABFpDruIQ6lEq7UVbvWa8wJw?e=ismf3y', '_blank')">
-                                <img src="images/final-year-project.png" class="card-img-top" alt="Project Image">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">Undergraduate Project</h5>
-                                    <p class="card-text">
-                                        Design and Fabrication of an Automated Waste Segregation System for Metallic and Non-Metallic Materials
-                                    </p>
-                                    <a href="https://1drv.ms/f/c/157503b4ec3c0850/ElAIPOy0A3UggBVqBQAAAAABFpDruIQ6lEq7UVbvWa8wJw?e=ismf3y" 
-                                       target="_blank" class="card-link mt-auto" onclick="event.stopPropagation()">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        </article>
                     </div>
-                </section>
-
-                <!-- Blog Section -->
-                <section class="mb-4" id="blog">
-                    <h3 class="section-heading">
-                        <i class="fas fa-pen"></i> Articles & Blog
-                    </h3>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core', '_blank')">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">
-                                        Build a Trivia Quiz WhatsApp Bot With Twilio and ASP.NET Core
-                                    </h5>
-                                    <p class="card-text">
-                                        This tutorial will guide you through building a trivia quiz game playable directly on WhatsApp using Twilio, ASP.NET Core, and The Trivia API.
-                                    </p>
-                                    <a href="https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core"
-                                       class="card-link mt-auto" onclick="event.stopPropagation()">Read More →</a>
-                                </div>
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://www.joincolab.io/product/dr-car-quotes', '_blank')">
+                            <img src="images/Dr-Car-Quotes.png" class="card-img-top" alt="Dr. Car Quotes interface" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Dr. Car Quotes</h3>
+                                <p class="card-text">
+                                    A tool that allows car owners to quickly compare prices of local auto shops.
+                                </p>
+                                <a href="https://www.joincolab.io/product/dr-car-quotes" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    View Project
+                                </a>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow-sm d-flex flex-column" style="cursor: pointer" 
-                                 onclick="window.open('https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase', '_blank')">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">
-                                        Creating a Books Tracker App with .NET MAUI and Supabase
-                                    </h5>
-                                    <p class="card-text">
-                                        Learn how to build a .NET MAUI app using the MVVM architecture that connects to a Supabase database for backend services.
-                                    </p>
-                                    <a href="https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase"
-                                       class="card-link mt-auto" onclick="event.stopPropagation()">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
+                        </article>
                     </div>
-                </section>
-
-                <div class="copyright">
-                    © 2025 Zadok Joshua
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://github.com/ZadokJoshua/MP-MMS', '_blank')">
+                            <img src="images/mpmms.jpg" class="card-img-top" alt="MP-MMS dashboard" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">MP-MMS</h3>
+                                <p class="card-text">Monitor and track the state of machine parts and equipment in your engineering workshop</p>
+                                <a href="https://github.com/ZadokJoshua/MP-MMS" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    View Project
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://github.com/ZadokJoshua/betakads-avalonia-app', '_blank')">
+                            <img src="images/betakads-fluent2.png" class="card-img-top" alt="Betakads application interface" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Betakads</h3>
+                                <p class="card-text">AI-Powered Anki Flashcard Generator</p>
+                                <a href="https://github.com/ZadokJoshua/betakads-avalonia-app" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    View Project
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://1drv.ms/f/c/157503b4ec3c0850/ElAIPOy0A3UggBVqBQAAAAABFpDruIQ6lEq7UVbvWa8wJw?e=ismf3y', '_blank')">
+                            <img src="images/final-year-project.png" class="card-img-top" alt="Automated waste segregation system" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Undergraduate Project</h3>
+                                <p class="card-text">
+                                    Design and Fabrication of an Automated Waste Segregation System for Metallic and Non-Metallic Materials
+                                </p>
+                                <a href="https://1drv.ms/f/c/157503b4ec3c0850/ElAIPOy0A3UggBVqBQAAAAABFpDruIQ6lEq7UVbvWa8wJw?e=ismf3y" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    View Project
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-    </body>
+            <!-- Blog Section -->
+            <section class="mb-4" id="blog">
+                <h2 class="section-heading">
+                    <i class="fas fa-pen" aria-hidden="true"></i> Articles & Blog
+                </h2>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core', '_blank')">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">
+                                    Build a Trivia Quiz WhatsApp Bot With Twilio and ASP.NET Core
+                                </h3>
+                                <p class="card-text">
+                                    This tutorial will guide you through building a trivia quiz game playable directly on WhatsApp using Twilio, ASP.NET Core, and The Trivia API.
+                                </p>
+                                <a href="https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    Read More →
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card h-100 shadow-sm d-flex flex-column clickable-card" onclick="window.open('https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase', '_blank')">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">
+                                    Creating a Books Tracker App with .NET MAUI and Supabase
+                                </h3>
+                                <p class="card-text">
+                                    Learn how to build a .NET MAUI app using the MVVM architecture that connects to a Supabase database for backend services.
+                                </p>
+                                <a href="https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase" target="_blank" rel="noopener noreferrer" class="card-link mt-auto" onclick="event.stopPropagation()">
+                                    Read More →
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="copyright">
+                © 2025 Zadok Joshua
+            </footer>
+        </div>
+    </div>
+</body>
 </html>
-                
