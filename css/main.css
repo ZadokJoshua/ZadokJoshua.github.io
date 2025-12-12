@@ -158,13 +158,14 @@ p {
     border-radius: 50%;
     border: 3px solid var(--ms-primary);
     transition: var(--transition);
-    filter: grayscale(0%);
+    filter: grayscale(100%);
 }
 
 .profile-image:hover {
     transform: scale(1.08) rotate(2deg);
     box-shadow: 0 0 24px rgba(0, 120, 212, 0.4);
     border: 3px solid var(--ms-secondary);
+    filter: grayscale(0%);
 }
 
 /* Buttons */
