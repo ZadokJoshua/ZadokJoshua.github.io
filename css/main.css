@@ -261,7 +261,7 @@ p {
 }
 
 .container-fluid {
-    background: #1a1a1a;
+    background: var(--ms-secondary);
     min-height: 100vh;
 }
 
