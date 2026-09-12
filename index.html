@@ -7,19 +7,45 @@
     <meta name="description" content="Software Engineer focused on backend systems, cloud workflows, and practical product engineering.">
     <meta name="keywords" content="Zadok Joshua, Software Engineer, .NET, Python, C#">
     <meta name="author" content="Zadok Joshua">
+    <meta name="theme-color" content="#11100f">
 
     <title>Zadok Joshua - Software Engineer</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;document.documentElement.classList.add('js');}catch(e){}</script>
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='black'/><text x='4' y='24' font-size='18' font-family='Arial' fill='white'>ZJ</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+
     <link href="css/main.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Sections">
+        <div class="site-nav-inner">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#featured">Featured</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Articles</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
     <main class="page-shell">
         <!-- Profile Section -->
         <header class="profile-section">
-            <img src="images/profile-picture.jpg" alt="Zadok Joshua - Software Engineer" class="profile-image">
+            <img src="images/profile-picture.jpg" alt="Zadok Joshua - Software Engineer" class="profile-image" width="124" height="124">
             <div class="profile-copy">
                 <p class="eyebrow">Software Engineer</p>
                 <h1>Zadok Joshua</h1>
@@ -42,32 +68,36 @@
 
         <!-- About Section -->
         <section class="section" id="about">
+            <h2 class="section-heading">
+                <i class="fas fa-user" aria-hidden="true"></i> About
+            </h2>
+
             <p class="lead-copy">
                 I build backend systems, APIs, and cloud workflows with C#/.NET, Python, and SQL.
             </p>
 
             <div class="about-grid">
                 <div class="about-card">
-                    <h6><i class="fas fa-code" aria-hidden="true"></i> Technical Skills</h6>
-                    <div class="tag-list" aria-label="Technical skills">
-                        <span>C#</span>
-                        <span>.NET</span>
-                        <span>ASP.NET Core</span>
-                        <span>Python</span>
-                        <span>SQL Server</span>
-                        <span>Azure</span>
-                        <span>AWS</span>
-                        <span>Cosmos DB</span>
+                    <h3><i class="fas fa-code" aria-hidden="true"></i> Technical Skills</h3>
+                    <div class="tag-list" role="list" aria-label="Technical skills">
+                        <span role="listitem">C#</span>
+                        <span role="listitem">.NET</span>
+                        <span role="listitem">ASP.NET Core</span>
+                        <span role="listitem">Python</span>
+                        <span role="listitem">SQL Server</span>
+                        <span role="listitem">Azure</span>
+                        <span role="listitem">AWS</span>
+                        <span role="listitem">Cosmos DB</span>
                     </div>
                 </div>
                 <div class="about-card">
-                    <h6><i class="fas fa-lightbulb" aria-hidden="true"></i> Focus Areas</h6>
-                    <div class="tag-list" aria-label="Focus areas">
-                        <span>Backend Development</span>
-                        <span>APIs</span>
-                        <span>Cloud</span>
-                        <span>Data Workflows</span>
-                        <span>AI Integration</span>
+                    <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> Focus Areas</h3>
+                    <div class="tag-list" role="list" aria-label="Focus areas">
+                        <span role="listitem">Backend Development</span>
+                        <span role="listitem">APIs</span>
+                        <span role="listitem">Cloud</span>
+                        <span role="listitem">Data Workflows</span>
+                        <span role="listitem">AI Integration</span>
                     </div>
                 </div>
             </div>
@@ -78,43 +108,61 @@
             <h2 class="section-heading">
                 <i class="fas fa-briefcase" aria-hidden="true"></i> Experience
             </h2>
-            <article class="experience-item">
-                <div class="experience-date">Jul. 2025 - Mar. 2026</div>
-                <div class="experience-content">
-                    <h3>CypherCrescent Limited</h3>
-                    <p class="experience-role">Software Engineer | Port Harcourt, Nigeria</p>
-                    <p>
-                        Worked on <a href="https://cyphercrescent.com/products/diap" target="_blank" rel="noopener noreferrer">SEPAL DIAP</a>, a drilling and intervention activity planner for integrated well schedules. Focused on notifications, bulk imports, and API validation.
-                    </p>
-                    <div class="tag-list compact" aria-label="Experience highlights">
-                        <span>Notifications</span>
-                        <span>Bulk imports</span>
-                        <span>API validation</span>
-                        <span>Scheduling workflows</span>
+            <div class="experience-list">
+                <article class="experience-item" data-reveal>
+                    <div class="experience-date">Apr. 2026 - Present</div>
+                    <div class="experience-content">
+                        <h3>Guaranty Trust Bank</h3>
+                        <p class="experience-role">Software Engineer | Lagos, Nigeria</p>
+                        <p>
+                            Build and maintain microservices that integrate core banking systems with customer-facing channels, exposing banking operations to digital products through reliable APIs.
+                        </p>
+                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
+                            <span role="listitem">Microservices</span>
+                            <span role="listitem">Core banking</span>
+                            <span role="listitem">Systems integration</span>
+                            <span role="listitem">Channels</span>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="experience-item">
-                <div class="experience-date">Feb. 2024 - Jun. 2025</div>
-                <div class="experience-content">
-                    <h3>Helixus</h3>
-                    <p class="experience-role">Back-End Engineer | London, United Kingdom (remote)</p>
-                    <p>
-                        Built an AI-powered job recommendation engine using vector embeddings and semantic search, improving candidate-job match accuracy by 40%. Spearheaded service deployments and managed technical infrastructure on Amazon Web Services.
-                    </p>
-                    <div class="tag-list compact" aria-label="Experience highlights">
-                        <span>Vector embeddings</span>
-                        <span>Semantic search</span>
-                        <span>Job recommendations</span>
-                        <span>AWS</span>
-                        <span>Infrastructure</span>
+                </article>
+                <article class="experience-item" data-reveal>
+                    <div class="experience-date">Jul. 2025 - Mar. 2026</div>
+                    <div class="experience-content">
+                        <h3>CypherCrescent Limited</h3>
+                        <p class="experience-role">Software Engineer | Port Harcourt, Nigeria</p>
+                        <p>
+                            Worked on <a href="https://cyphercrescent.com/products/diap" target="_blank" rel="noopener noreferrer">SEPAL DIAP</a>, a drilling and intervention activity planner for integrated well schedules. Focused on notifications, bulk imports, and API validation.
+                        </p>
+                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
+                            <span role="listitem">Notifications</span>
+                            <span role="listitem">Bulk imports</span>
+                            <span role="listitem">API validation</span>
+                            <span role="listitem">Scheduling workflows</span>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+                <article class="experience-item" data-reveal>
+                    <div class="experience-date">Feb. 2024 - Jun. 2025</div>
+                    <div class="experience-content">
+                        <h3>Helixus</h3>
+                        <p class="experience-role">Back-End Engineer | London, United Kingdom (remote)</p>
+                        <p>
+                            Built an AI-powered job recommendation engine using vector embeddings and semantic search, improving candidate-job match accuracy by 40%. Spearheaded service deployments and managed technical infrastructure on Amazon Web Services.
+                        </p>
+                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
+                            <span role="listitem">Vector embeddings</span>
+                            <span role="listitem">Semantic search</span>
+                            <span role="listitem">Job recommendations</span>
+                            <span role="listitem">AWS</span>
+                            <span role="listitem">Infrastructure</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <!-- Featured Section -->
-        <section class="section featured-section">
+        <section class="section featured-section" id="featured">
             <h2 class="section-heading">
                 <i class="fas fa-award" aria-hidden="true"></i> Featured
             </h2>
@@ -143,7 +191,7 @@
                 <i class="fas fa-tasks" aria-hidden="true"></i> Projects
             </h2>
             <div class="project-grid">
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/rebyu.png" class="card-img-top" alt="Rebyu platform screenshot" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Rebyu</h3>
@@ -155,7 +203,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/sautive.jpg" class="card-img-top" alt="Sautive platform screenshot" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Sautive</h3>
@@ -167,7 +215,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/betakads-fluent2.png" class="card-img-top" alt="Betakads application interface" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Betakads</h3>
@@ -177,7 +225,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/parkinn.png" class="card-img-top" alt="ParkInn app interface" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">ParkInn</h3>
@@ -189,7 +237,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/Dr-Car-Quotes.png" class="card-img-top" alt="Dr. Car Quotes interface" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Dr. Car Quotes</h3>
@@ -201,7 +249,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <img src="images/mpmms.jpg" class="card-img-top" alt="MP-MMS dashboard" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">MP-MMS</h3>
@@ -222,23 +270,23 @@
                 <i class="fas fa-pen" aria-hidden="true"></i> Articles
             </h2>
             <div class="article-grid">
-                <article class="card">
+                <article class="card" data-reveal>
                     <div class="card-body">
                         <h3 class="card-title">
                             Build a Trivia Quiz WhatsApp Bot With Twilio and ASP.NET Core
                         </h3>
                         <a href="https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Read More &rarr;
+                            Read More
                         </a>
                     </div>
                 </article>
-                <article class="card">
+                <article class="card" data-reveal>
                     <div class="card-body">
                         <h3 class="card-title">
                             Creating a Books Tracker App with .NET MAUI and Supabase
                         </h3>
                         <a href="https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Read More &rarr;
+                            Read More
                         </a>
                     </div>
                 </article>
