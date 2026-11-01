@@ -13,22 +13,36 @@
 
     <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2360cdff'/><text x='16' y='23' font-size='17' font-weight='700' font-family='Helvetica,Arial,sans-serif' text-anchor='middle' fill='%2311100f'>ZJ</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2360cdff'/><path d='M7 6h18v4.5L13 21.5h12V26H7v-4.5L19 10.5H7Z' fill='%2311100f'/></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
 
-    <link href="css/main.css" rel="stylesheet">
+    <!-- Bump ?v= when these files change, so browsers don't reuse a cached copy -->
+    <link href="css/main.css?v=2" rel="stylesheet">
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=2" defer></script>
 </head>
 <body>
     <main class="page">
         <!-- Intro -->
         <header>
             <div class="identity">
-                <img src="images/profile-picture.jpg" alt="Zadok Joshua" class="photo" width="88" height="88">
+                <span class="portrait">
+                    <img src="images/profile-picture.jpg" alt="Zadok Joshua" class="photo" width="88" height="88">
+                    <svg class="portrait-ring" viewBox="0 0 104 104" aria-hidden="true" focusable="false">
+                        <defs>
+                            <mask id="portrait-reveal">
+                                <circle class="portrait-reveal" cx="52" cy="52" r="49" pathLength="1"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#portrait-reveal)">
+                            <circle class="portrait-stitch" cx="52" cy="52" r="49" pathLength="40"/>
+                            <circle class="portrait-dot" cx="52" cy="52" r="49" pathLength="40"/>
+                        </g>
+                    </svg>
+                </span>
                 <div>
                     <h1>Zadok Joshua</h1>
                     <p class="job-title">Software Engineer</p>

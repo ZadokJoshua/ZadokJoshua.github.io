@@ -113,14 +113,73 @@ section {
     margin-bottom: 24px;
 }
 
+.portrait {
+    position: relative;
+    flex-shrink: 0;
+    width: 88px;
+    height: 88px;
+}
+
 .photo {
     display: block;
-    flex-shrink: 0;
     width: 88px;
     height: 88px;
     object-fit: cover;
     border: 1px solid var(--line);
     border-radius: 50%;
+}
+
+/* A ring of stitches sews itself around the photo on hover */
+.portrait-ring {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 104px;
+    height: 104px;
+    pointer-events: none;
+    transform: rotate(-90deg);
+}
+
+.portrait-ring circle {
+    fill: none;
+    stroke-linecap: round;
+}
+
+.portrait-stitch {
+    stroke: var(--accent);
+    stroke-width: 2;
+    stroke-dasharray: 1 1;
+}
+
+.portrait-dot {
+    stroke: var(--fabric-accent);
+    stroke-width: 2.5;
+    stroke-dasharray: 0 2;
+    stroke-dashoffset: -1.5;
+}
+
+.portrait-ring .portrait-reveal {
+    stroke: #fff;
+    stroke-width: 8;
+    stroke-linecap: butt;
+    stroke-dasharray: 1 2;
+    stroke-dashoffset: 1.01;
+}
+
+@media (hover: hover) {
+    .portrait:hover .portrait-reveal {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .portrait-ring .portrait-reveal {
+        transition: stroke-dashoffset 0.4s ease-in;
+    }
+
+    .portrait:hover .portrait-reveal {
+        transition: stroke-dashoffset 0.9s ease-out;
+    }
 }
 
 .job-title {
