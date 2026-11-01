@@ -3,11 +3,10 @@
 
     var root = document.documentElement;
     var toggle = document.querySelector(".theme-toggle");
-    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
     /* Theme toggle */
     function currentTheme() {
-        return root.dataset.theme || (prefersDark.matches ? "dark" : "light");
+        return root.dataset.theme || "dark";
     }
 
     function syncToggle() {
@@ -24,8 +23,6 @@
         } catch (e) { /* storage unavailable */ }
         syncToggle();
     });
-
-    prefersDark.addEventListener("change", syncToggle);
 
     syncToggle();
     toggle.hidden = false;

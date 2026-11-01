@@ -3,8 +3,8 @@
    ========================================================================== */
 
 :root {
-    /* Follows the device setting until the visitor picks a theme */
-    color-scheme: light dark;
+    /* Dark until the visitor picks a theme */
+    color-scheme: dark;
 
     --font-body: "IBM Plex Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     --font-heading: "Space Grotesk", "IBM Plex Sans", "Segoe UI", sans-serif;
@@ -15,14 +15,14 @@
     --line: light-dark(#e3e1df, #373534);
     --accent: light-dark(#0a63b0, #60cdff);
     --accent-hover: light-dark(#084f8c, #8bdcff);
+
+    --fabric-ground: light-dark(#0f3a63, #142c44);
+    --fabric-thread: light-dark(#f4efe4, #8bdcff);
+    --fabric-accent: light-dark(#e0a82e, #f0b94a);
 }
 
 :root[data-theme="light"] {
     color-scheme: light;
-}
-
-:root[data-theme="dark"] {
-    color-scheme: dark;
 }
 
 /* ==========================================================================
@@ -175,6 +175,45 @@ section {
 .theme-toggle[data-mode="dark"] .icon-moon,
 .theme-toggle[data-mode="light"] .icon-sun {
     display: none;
+}
+
+/* ==========================================================================
+   Fabric band
+   ========================================================================== */
+
+.fabric {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-top: 32px;
+}
+
+.fabric + section {
+    margin-top: 32px;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.fabric-ground {
+    fill: var(--fabric-ground);
+}
+
+.fabric-thread {
+    fill: var(--fabric-thread);
+}
+
+.fabric-accent {
+    fill: var(--fabric-accent);
+}
+
+.fabric-line {
+    fill: none;
+    stroke: var(--fabric-thread);
+    stroke-width: 1.5;
+}
+
+.fabric-stitch {
+    stroke-dasharray: 2 3;
 }
 
 /* ==========================================================================
