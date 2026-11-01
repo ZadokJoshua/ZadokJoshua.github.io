@@ -7,291 +7,157 @@
     <meta name="description" content="Software Engineer focused on backend systems, cloud workflows, and practical product engineering.">
     <meta name="keywords" content="Zadok Joshua, Software Engineer, .NET, Python, C#">
     <meta name="author" content="Zadok Joshua">
-    <meta name="theme-color" content="#11100f">
+    <meta name="theme-color" content="#faf9f8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#11100f" media="(prefers-color-scheme: dark)">
 
     <title>Zadok Joshua - Software Engineer</title>
 
-    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;document.documentElement.classList.add('js');}catch(e){}</script>
+    <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2360cdff'/><text x='16' y='23' font-size='17' font-weight='700' font-family='Helvetica,Arial,sans-serif' text-anchor='middle' fill='%2311100f'>ZJ</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
 
     <link href="css/main.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#about">Skip to content</a>
-
-    <nav class="site-nav" aria-label="Sections">
-        <div class="site-nav-inner">
-            <span class="nav-brand" aria-hidden="true">ZJ</span>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#featured">Featured</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Articles</a>
-            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-                <i class="fas fa-moon" aria-hidden="true"></i>
-            </button>
-        </div>
-    </nav>
-
-    <main class="page-shell">
-        <!-- Profile Section -->
-        <header class="profile-section">
-            <img src="images/profile-picture.jpg" alt="Zadok Joshua - Software Engineer" class="profile-image" width="124" height="124">
-            <div class="profile-copy">
-                <p class="eyebrow">Software Engineer</p>
-                <h1>Zadok Joshua</h1>
-                <p class="job-title">
-                    Backend engineer building .NET, cloud, and data workflows for practical products.
-                </p>
-                <nav class="social-links" aria-label="Social media links">
-                    <a href="mailto:zadokjoshua@outlook.com" title="Email" aria-label="Send me an email">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/ZadokJoshua" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Visit my GitHub profile">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/zadok-joshua" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Visit my LinkedIn profile">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
+    <main class="page">
+        <!-- Intro -->
+        <header>
+            <div class="identity">
+                <img src="images/profile-picture.jpg" alt="Zadok Joshua" class="photo" width="88" height="88">
+                <div>
+                    <h1>Zadok Joshua</h1>
+                    <p class="job-title">Software Engineer</p>
+                </div>
+            </div>
+            <p class="lead">
+                I build backend systems, APIs, and cloud-native applications.
+            </p>
+            <div class="actions">
+                <nav class="links" aria-label="Contact links">
+                    <a href="mailto:zadokjoshua@outlook.com">Email</a>
+                    <a href="https://github.com/ZadokJoshua" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/zadok-joshua" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </nav>
+                <button class="theme-toggle" type="button" aria-label="Switch theme" hidden>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                    </svg>
+                </button>
             </div>
         </header>
 
-        <!-- About Section -->
-        <section class="section" id="about">
-            <h2 class="section-heading">
-                <i class="fas fa-user" aria-hidden="true"></i> About
-            </h2>
-
-            <p class="lead-copy">
-                I build backend systems, APIs, and cloud workflows with C#/.NET, Python, and SQL.
-            </p>
-
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3><i class="fas fa-code" aria-hidden="true"></i> Technical Skills</h3>
-                    <div class="tag-list" role="list" aria-label="Technical skills">
-                        <span role="listitem">C#</span>
-                        <span role="listitem">.NET</span>
-                        <span role="listitem">ASP.NET Core</span>
-                        <span role="listitem">Python</span>
-                        <span role="listitem">SQL Server</span>
-                        <span role="listitem">Azure</span>
-                        <span role="listitem">AWS</span>
-                        <span role="listitem">Cosmos DB</span>
-                    </div>
+        <!-- Experience -->
+        <section>
+            <h2>Experience</h2>
+            <article class="item">
+                <div class="item-head">
+                    <h3>Guaranty Trust Bank</h3>
+                    <span class="date">Apr. 2026 - Present</span>
                 </div>
-                <div class="about-card">
-                    <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> Focus Areas</h3>
-                    <div class="tag-list" role="list" aria-label="Focus areas">
-                        <span role="listitem">Backend Development</span>
-                        <span role="listitem">APIs</span>
-                        <span role="listitem">Cloud</span>
-                        <span role="listitem">Data Workflows</span>
-                        <span role="listitem">AI Integration</span>
-                    </div>
+                <p class="role">Software Engineer | Lagos, Nigeria</p>
+                <p>
+                    Build and maintain microservices that integrate core banking systems with customer-facing channels, exposing banking operations to digital products through reliable APIs.
+                </p>
+            </article>
+            <article class="item">
+                <div class="item-head">
+                    <h3>CypherCrescent Limited</h3>
+                    <span class="date">Jul. 2025 - Mar. 2026</span>
                 </div>
-            </div>
+                <p class="role">Software Engineer | Port Harcourt, Nigeria</p>
+                <p>
+                    Worked on <a href="https://cyphercrescent.com/products/diap" target="_blank" rel="noopener noreferrer">SEPAL DIAP</a>, a drilling and intervention activity planner for integrated well schedules. Focused on notifications, bulk imports, and API validation.
+                </p>
+            </article>
+            <article class="item">
+                <div class="item-head">
+                    <h3>Helixus</h3>
+                    <span class="date">Feb. 2024 - Jun. 2025</span>
+                </div>
+                <p class="role">Back-End Engineer | London, United Kingdom (remote)</p>
+                <p>
+                    Built an AI-powered job recommendation engine using vector embeddings and semantic search, improving candidate-job match accuracy by 40%. Spearheaded service deployments and managed technical infrastructure on Amazon Web Services.
+                </p>
+            </article>
         </section>
 
-        <!-- Experience Section -->
-        <section class="section" id="experience">
-            <h2 class="section-heading">
-                <i class="fas fa-briefcase" aria-hidden="true"></i> Experience
-            </h2>
-            <div class="experience-list">
-                <article class="experience-item" data-reveal>
-                    <div class="experience-date">Apr. 2026 - Present</div>
-                    <div class="experience-content">
-                        <h3>Guaranty Trust Bank</h3>
-                        <p class="experience-role">Software Engineer | Lagos, Nigeria</p>
-                        <p>
-                            Build and maintain microservices that integrate core banking systems with customer-facing channels, exposing banking operations to digital products through reliable APIs.
-                        </p>
-                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
-                            <span role="listitem">Microservices</span>
-                            <span role="listitem">Core banking</span>
-                            <span role="listitem">Systems integration</span>
-                            <span role="listitem">Channels</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="experience-item" data-reveal>
-                    <div class="experience-date">Jul. 2025 - Mar. 2026</div>
-                    <div class="experience-content">
-                        <h3>CypherCrescent Limited</h3>
-                        <p class="experience-role">Software Engineer | Port Harcourt, Nigeria</p>
-                        <p>
-                            Worked on <a href="https://cyphercrescent.com/products/diap" target="_blank" rel="noopener noreferrer">SEPAL DIAP</a>, a drilling and intervention activity planner for integrated well schedules. Focused on notifications, bulk imports, and API validation.
-                        </p>
-                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
-                            <span role="listitem">Notifications</span>
-                            <span role="listitem">Bulk imports</span>
-                            <span role="listitem">API validation</span>
-                            <span role="listitem">Scheduling workflows</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="experience-item" data-reveal>
-                    <div class="experience-date">Feb. 2024 - Jun. 2025</div>
-                    <div class="experience-content">
-                        <h3>Helixus</h3>
-                        <p class="experience-role">Back-End Engineer | London, United Kingdom (remote)</p>
-                        <p>
-                            Built an AI-powered job recommendation engine using vector embeddings and semantic search, improving candidate-job match accuracy by 40%. Spearheaded service deployments and managed technical infrastructure on Amazon Web Services.
-                        </p>
-                        <div class="tag-list compact" role="list" aria-label="Experience highlights">
-                            <span role="listitem">Vector embeddings</span>
-                            <span role="listitem">Semantic search</span>
-                            <span role="listitem">Job recommendations</span>
-                            <span role="listitem">AWS</span>
-                            <span role="listitem">Infrastructure</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+            <article class="item">
+                <h3><a href="https://github.com/ZadokJoshua/betakads-avalonia-app" target="_blank" rel="noopener noreferrer">Betakads</a></h3>
+                <p>
+                    AI flashcards from PDFs and YouTube. Won the AI category at <a href="https://github.com/microsoft/hack-together-dotnet" target="_blank" rel="noopener noreferrer">Microsoft Hack Together: The Great .NET 8 Hack</a> and was featured on <a href="https://devblogs.microsoft.com/dotnet/great-dotnet-8-hack-winners/" target="_blank" rel="noopener noreferrer">Microsoft's developer blog</a>. <a href="https://www.youtube.com/watch?v=NJot80uMbp0" target="_blank" rel="noopener noreferrer">Watch the video</a>.
+                </p>
+            </article>
+            <article class="item">
+                <h3><a href="https://github.com/ZadokJoshua/rebyu" target="_blank" rel="noopener noreferrer">Rebyu</a></h3>
+                <p>Natural-language SQLite viewer.</p>
+            </article>
+            <article class="item">
+                <h3><a href="https://www.sautive.com/" target="_blank" rel="noopener noreferrer">Sautive</a></h3>
+                <p>Volunteer and nonprofit matching across Africa. Under construction.</p>
+            </article>
+            <article class="item">
+                <h3><a href="https://www.joincolab.io/product/parkinn" target="_blank" rel="noopener noreferrer">ParkInn</a></h3>
+                <p>Parking discovery for city drivers.</p>
+            </article>
+            <article class="item">
+                <h3><a href="https://www.joincolab.io/product/dr-car-quotes" target="_blank" rel="noopener noreferrer">Dr. Car Quotes</a></h3>
+                <p>Auto repair quote comparison.</p>
+            </article>
+            <article class="item">
+                <h3><a href="https://github.com/ZadokJoshua/MP-MMS" target="_blank" rel="noopener noreferrer">MP-MMS</a></h3>
+                <p>Workshop equipment monitoring.</p>
+            </article>
         </section>
 
-        <!-- Featured Section -->
-        <section class="section featured-section" id="featured">
-            <h2 class="section-heading">
-                <i class="fas fa-award" aria-hidden="true"></i> Featured
-            </h2>
-            <div class="featured-layout">
-                <div>
-                    <p class="featured-copy">
-                        <strong>Betakads</strong> won the AI category at <a href="https://github.com/microsoft/hack-together-dotnet" target="_blank" rel="noopener noreferrer">Microsoft Hack Together: The Great .NET 8 Hack</a> and was featured on <a href="https://devblogs.microsoft.com/dotnet/great-dotnet-8-hack-winners/" target="_blank" rel="noopener noreferrer">Microsoft's developer blog</a>.
-                    </p>
-                </div>
-                <div class="featured-video">
-                    <iframe
-                        src="https://www.youtube.com/embed/NJot80uMbp0?si=24eiwX-uRWkOA9t5"
-                        title="Betakads - AI-Powered Anki Flashcard Generator"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
+        <!-- Articles -->
+        <section>
+            <h2>Articles</h2>
+            <article class="item">
+                <h3><a href="https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core" target="_blank" rel="noopener noreferrer">Build a Trivia Quiz WhatsApp Bot With Twilio and ASP.NET Core</a></h3>            </article>
+            <article class="item">
+                <h3><a href="https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase" target="_blank" rel="noopener noreferrer">Creating a Books Tracker App with .NET MAUI and Supabase</a></h3>            </article>
         </section>
 
-        <!-- Projects Section -->
-        <section class="section" id="projects">
-            <h2 class="section-heading">
-                <i class="fas fa-tasks" aria-hidden="true"></i> Projects
-            </h2>
-            <div class="project-grid">
-                <article class="card" data-reveal>
-                    <img src="images/rebyu.png" class="card-img-top" alt="Rebyu platform screenshot" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Rebyu</h3>
-                        <p class="card-text">
-                            Natural-language SQLite viewer.
-                        </p>
-                        <a href="https://github.com/ZadokJoshua/rebyu" target="_blank" rel="noopener noreferrer" class="card-link">
-                            View Project
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <img src="images/sautive.jpg" class="card-img-top" alt="Sautive platform screenshot" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Sautive</h3>
-                        <p class="card-text">
-                            Volunteer and nonprofit matching across Africa.
-                        </p>
-                        <a href="https://www.sautive.com/" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Under Construction
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <img src="images/betakads-fluent2.png" class="card-img-top" alt="Betakads application interface" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Betakads</h3>
-                        <p class="card-text">AI flashcards from PDFs and YouTube.</p>
-                        <a href="https://github.com/ZadokJoshua/betakads-avalonia-app" target="_blank" rel="noopener noreferrer" class="card-link">
-                            View Project
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <img src="images/parkinn.png" class="card-img-top" alt="ParkInn app interface" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">ParkInn</h3>
-                        <p class="card-text">
-                            Parking discovery for city drivers.
-                        </p>
-                        <a href="https://www.joincolab.io/product/parkinn" target="_blank" rel="noopener noreferrer" class="card-link">
-                            View Project
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <img src="images/Dr-Car-Quotes.png" class="card-img-top" alt="Dr. Car Quotes interface" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Dr. Car Quotes</h3>
-                        <p class="card-text">
-                            Auto repair quote comparison.
-                        </p>
-                        <a href="https://www.joincolab.io/product/dr-car-quotes" target="_blank" rel="noopener noreferrer" class="card-link">
-                            View Project
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <img src="images/mpmms.jpg" class="card-img-top" alt="MP-MMS dashboard" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">MP-MMS</h3>
-                        <p class="card-text">
-                            Workshop equipment monitoring.
-                        </p>
-                        <a href="https://github.com/ZadokJoshua/MP-MMS" target="_blank" rel="noopener noreferrer" class="card-link">
-                            View Project
-                        </a>
-                    </div>
-                </article>
-            </div>
+        <!-- Skills -->
+        <section>
+            <h2>Skills</h2>
+            <dl class="skills">
+                <dt>AI engineering</dt>
+                <dd>Multi-agent systems, LLM integration, Semantic Kernel, Microsoft Agent Framework, semantic search, vector embeddings, natural language to SQL, local model inference</dd>
+                <dt>Backend</dt>
+                <dd>ASP.NET Core, FastAPI, Entity Framework, microservices, API design, systems integration, real-time notifications, authentication, webhooks, background processing</dd>
+                <dt>Languages</dt>
+                <dd>C#, Python, TypeScript, SQL</dd>
+                <dt>Data</dt>
+                <dd>SQL Server, PostgreSQL, Cosmos DB, Redis</dd>
+                <dt>Cloud and DevOps</dt>
+                <dd>AWS (EC2, Lambda, RDS, S3, ECR), Azure, Azure DevOps, Docker, GitHub Actions, CI/CD, Prometheus, Grafana, OpenTelemetry</dd>
+            </dl>
         </section>
 
-        <!-- Blog Section -->
-        <section class="section" id="blog">
-            <h2 class="section-heading">
-                <i class="fas fa-pen" aria-hidden="true"></i> Articles
-            </h2>
-            <div class="article-grid">
-                <article class="card" data-reveal>
-                    <div class="card-body">
-                        <h3 class="card-title">
-                            Build a Trivia Quiz WhatsApp Bot With Twilio and ASP.NET Core
-                        </h3>
-                        <a href="https://hackernoon.com/build-a-trivia-quiz-whatsapp-bot-with-twilio-and-aspnet-core" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Read More
-                        </a>
-                    </div>
-                </article>
-                <article class="card" data-reveal>
-                    <div class="card-body">
-                        <h3 class="card-title">
-                            Creating a Books Tracker App with .NET MAUI and Supabase
-                        </h3>
-                        <a href="https://hackernoon.com/creating-a-books-tracker-app-with-net-maui-and-supabase" target="_blank" rel="noopener noreferrer" class="card-link">
-                            Read More
-                        </a>
-                    </div>
-                </article>
-            </div>
+        <!-- Certifications -->
+        <section>
+            <h2>Certifications</h2>
+            <ul class="certifications">
+                <li>Microsoft Certified: Azure AI Engineer Associate</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Google Data Analytics Professional Certificate</li>
+                <li>Google IT Support Professional Certificate</li>
+                <li>AWS Certified Developer Associate (In progress)</li>
+            </ul>
         </section>
 
         <footer class="copyright">
